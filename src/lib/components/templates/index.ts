@@ -1,0 +1,1 @@
+export { default as MoshikPortfolioIndex } from './MoshikPortfolioIndex.svelte'; 
