@@ -2,7 +2,7 @@
   import Hero from './templates/Hero.svelte';
   import FeatureCards from './templates/FeatureCards.svelte';
   import UIStyles from './templates/UIStyles.svelte';
-  import { Code, Briefcase, GraduationCap, Star, Award, Mail, Phone, Github, Linkedin, Terminal, Database, Rocket } from 'lucide-svelte';
+  import { Code, Briefcase, GraduationCap, Star, Award, Mail, Phone, Github, Linkedin, Terminal, Database, Rocket, Download } from 'lucide-svelte';
   import type { Feature } from './templates/FeatureCards.svelte';
   
   // Skills section
@@ -208,8 +208,10 @@
         </a>
       </div>
       
-      <a href="#" class="btn btn-primary">
-        <span>Download Resume</span>
+      <a href="/Moshik_Ohana_Resume.pdf" download class="btn btn-primary group relative overflow-hidden transition-all duration-300 ease-out hover:scale-105 active:scale-95 flex items-center gap-2">
+        <span class="z-10 relative">Download Resume</span>
+        <Download size={18} class="z-10 relative animate-bounce-subtle" />
+        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
       </a>
     </div>
   </section>

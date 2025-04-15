@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+@layer utilities {
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s ease-in-out infinite;
+  }
+  
+  .btn-primary {
+    @apply py-3 px-6 bg-indigo-500 text-white font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  .glass-effect {
+    @apply bg-opacity-10 backdrop-blur-lg backdrop-filter;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500;
+  }
+
+  .hover-pop {
+    @apply transition-transform hover:scale-105 active:scale-95;
+  }
+
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+
+  .shimmer::before {
+    @apply absolute top-0 -left-3/4 block w-1/2 h-full z-10 bg-gradient-to-r from-transparent to-white/20 skew-x-[-20deg];
+    content: '';
+    animation: shimmer 3s infinite;
+  }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+} 
