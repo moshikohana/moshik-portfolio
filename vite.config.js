@@ -9,5 +9,5 @@ export default defineConfig({
       preprocess: sveltePreprocess(),
     })
   ],
-  base: '/moshik-portfolio/'
+  base: '/'
 }) 
